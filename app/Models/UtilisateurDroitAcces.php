@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Utilisateur_DroitAcces extends Model
+class UtilisateurDroitAcces extends Model
 {
     use HasFactory;
 

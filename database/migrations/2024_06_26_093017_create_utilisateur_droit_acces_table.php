@@ -14,9 +14,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('utilisateur__droit_acces', function (Blueprint $table) {
+        Schema::create('utilisateur_droit_acces', function (Blueprint $table) {
             $table->id();
-            $table->boolean("status")->default(false);
+            $table->boolean("statut")->default(false);
             $table->foreignIdFor(DroitAcces::class)->constrained()->cascadeOnDelete();
             $table->foreignIdFor(Utilisateur::class)->constrained()->cascadeOnDelete();
             $table->unique(['droit_acces_id', 'utilisateur_id']);
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('utilisateur__droit_acces');
+        Schema::dropIfExists('utilisateur_droit_acces');
     }
 };
