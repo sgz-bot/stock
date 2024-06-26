@@ -9,10 +9,7 @@
     <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
     {{-- font awesome --}}  
     <link rel="stylesheet" href="{{ asset('fontawesome/css/all.css') }}">
-    <link rel="stylesheet" href="{{ asset('fontawesome/css/all.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('fontawesome/css/fontawesome.css') }}">
-    <link rel="stylesheet" href="{{ asset('fontawesome/css/fontawesome.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('fontawesome/css/solid.css') }}">
+
     <title>@yield( 'title' )</title>
 </head>
 <body>
