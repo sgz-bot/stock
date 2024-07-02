@@ -19,70 +19,22 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        // User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        // creation de l'admin et assignation des droits
 
-        //Création du compte administrateur
-        $admin = Utilisateur::factory()->create([
+
+
+        $this->call([
+            DroitAccesSeeder::class,
+            UtilisateurSeeder::class,
+        ]);
+
+        $droitsAcces = DroitAcces::all();
+        $utilisateur = Utilisateur::factory()->create([
             'nom' => 'Admin',
-            'motDePasse' => Hash::make('passwordAdmin'),
+            'motDePasse' => '1234'
         ]);
 
-        //Création des droits d'accès
-        $droitAccesProduits = DroitAcces::factory()->create([
-            'designation' => 'Accès aux produits',
-        ]);
-
-        $droitAccesFournisseurs = DroitAcces::factory()->create([
-            'designation' => 'Accès aux fournisseurs',
-        ]);
-
-        $droitAccesVentes = DroitAcces::factory()->create([
-            'designation' => 'Accès aux ventes',
-        ]);
-
-        $droitAccesGererStock = DroitAcces::factory()->create([
-            'designation' => 'Gérer le stock',
-        ]);
-
-        $droitAccesModifierSuppProd = DroitAcces::factory()->create([
-            'designation' => 'modifier / supprimer produits',
-        ]);
-
-        //Assignation de tous les droits à l'admin
-        UtilisateurDroitAcces::factory()->create([
-            'statut' => true,
-            'utilisateur_id' => $admin->id,
-            'droit_acces_id' => $droitAccesProduits->id,
-        ]);
-
-        UtilisateurDroitAcces::factory()->create([
-            'statut' => true,
-            'utilisateur_id' => $admin->id,
-            'droit_acces_id' => $droitAccesFournisseurs->id,
-        ]);
-
-        UtilisateurDroitAcces::factory()->create([
-            'statut' => true,
-            'utilisateur_id' => $admin->id,
-            'droit_acces_id' => $droitAccesVentes->id,
-
-        ]);
-
-        UtilisateurDroitAcces::factory()->create([
-            'statut' => true,
-            'utilisateur_id' => $admin->id,
-            'droit_acces_id' => $droitAccesGererStock->id,
-
-        ]);
-
-        UtilisateurDroitAcces::factory()->create([
-            'statut' => true,
-            'utilisateur_id' => $admin->id,
-            'droit_acces_id' => $droitAccesModifierSuppProd->id,
-        ]);
+        $utilisateur->droitsAcces()->attach($droitsAcces);
 
     }
 }

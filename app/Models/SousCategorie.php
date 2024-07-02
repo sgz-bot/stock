@@ -14,8 +14,8 @@ class SousCategorie extends Model
         return $this->hasMany(Produit::class);
     }
 
-    public function categorie()
-    {
-        return $this->belongsTo(Categorie::class);
-    }
+    // public function categorie()
+    // {
+    //     return $this->belongsTo(Categorie::class);
+    // }
 }

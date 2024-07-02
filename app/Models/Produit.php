@@ -9,18 +9,14 @@ class Produit extends Model
 {
     use HasFactory;
 
-    public function sousCategorie()
-    {
-        return $this->belongsTo(SousCategorie::class);
-    }
 
     public function achats()
     {
         return $this->hasMany(Achat::class);
     }
 
-    public function livraisons()
+    public function fournisseurs()
     {
-        return $this->hasMany(Livraison::class);
+        return $this->belongsToMany(Fournisseur::class);
     }
 }

@@ -9,13 +9,13 @@ class Achat extends Model
 {
     use HasFactory;
 
-    public function utilisateur()
-    {
-        return $this->belongsTo(Utilisateur::class);
-    }
+    // public function utilisateur()
+    // {
+    //     return $this->belongsTo(Utilisateur::class);
+    // }
 
-    public function produit()
-    {
-        return $this->belongsTo(Produit::class);
-    }
+    // public function produit()
+    // {
+    //     return $this->belongsTo(Produit::class);
+    // }
 }

@@ -9,8 +9,8 @@ class Fournisseur extends Model
 {
     use HasFactory;
 
-    public function livraisons()
+    public function produits()
     {
-        return $this->hasMany(Livraison::class);
+        return $this->belongsToMany(Produit::class);
     }
 }

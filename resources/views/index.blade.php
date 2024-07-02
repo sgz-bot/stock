@@ -27,11 +27,11 @@
                 <div class="col-12">
                     <h1>Accueil</h1>
                 </div>
-    
+
             </div>
-    
-    
-    
+
+
+
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 text-center">
@@ -94,6 +94,16 @@
                                     </a>
                                 </div>
                                 <div class="col-3">
+                                    <a href="#" style="text-decoration: none;">
+                                        <div class="card bg-secondary text-light">
+                                            <div class="card-body d-flex flex-column align-items-center">
+                                                <i class="fa-solid fa-right-left fa-3x"></i>
+                                                <h5 class="card-title mt-3">Paramètre</h5>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-3">
                                     <div class="card bg-dark text-light">
                                         <div class="card-body d-flex flex-column align-items-center">
                                             <h1 class="card-title mt-3">{{ now()->toTimeString() }}</h1>
@@ -101,8 +111,11 @@
                                         </div>
                                     </div>
                                 </div>
-    
+
                             </div>
+
+
+
                             <div class="row mt-4">
                                 <div class="col-12">
                                     <p class="text-center">Obligation de conservation de vos données : pour votre sécurité,
@@ -120,15 +133,15 @@
                             </div>
                         </div>
                     </div>
-    
-    
-    
+
+
+
                     <div class="col-md-4"></div>
-    
-    
+
+
                 </div>
             </div>
-    
+
     </section>
 
 @endsection

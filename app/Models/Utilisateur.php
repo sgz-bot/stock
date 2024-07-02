@@ -9,13 +9,18 @@ class Utilisateur extends Model
 {
     use HasFactory;
 
-    public function caisse()
+    protected $guarded = [];
+
+    public function droitsAcces()
     {
-        return $this->belongsTo(Caisse::class);
+        return $this->belongsToMany(DroitAcces::class);
     }
+
 
     public function achats()
     {
         return $this->hasMany(Achat::class);
     }
+
+
 }

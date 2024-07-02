@@ -19,7 +19,7 @@ class UtilisateurFactory extends Factory
     {
         return [
             'nom' => $this->faker->unique()->name,
-            'motDePasse' => Hash::make('password'),
+            'motDePasse' => 'password',
         ];
     }
 }
