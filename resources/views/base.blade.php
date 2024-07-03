@@ -15,7 +15,7 @@
 <body>
 
 {{-- Main Content --}}
-<div class="">
+<div class="" style="min-height: 100vh">
     @yield( 'content' )
 </div>
 

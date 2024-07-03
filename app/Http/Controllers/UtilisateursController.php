@@ -10,4 +10,10 @@ class UtilisateursController extends Controller
     {
         return view('utilisateurs.gestion_des_droits');
     }
+
+    public function utilisateurs()
+    {
+        return view('utilisateurs.utilisateurs');
+    }
+
 }

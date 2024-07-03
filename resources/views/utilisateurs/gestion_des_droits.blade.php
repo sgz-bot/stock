@@ -6,7 +6,7 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-3 bg-dark text-white p-3">
+            <div class="col-md-3 bg-dark text-white p-3" style="min-height: 100vh">
                 <h3 class="text-center">PARAMETRES</h3>
                 <ul class="nav flex-column">
                     <li class="nav-item">
@@ -48,7 +48,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="card">
-                            <div class="card-header">Ajouter utilisateurs</div>
+                            <div class="card-header">Ajouter utilisateurs </div>
                             <div class="card-body">
                                 <table class="table table-bordered">
                                     <thead>

@@ -17,6 +17,11 @@ class CaisseController extends Controller
         $currentDateTime = now();
         return view('your-view', compact('currentDateTime'));
     }
+
+    public function vente()
+    {
+        return view('caisse.vente');
+    }
     
 
 
