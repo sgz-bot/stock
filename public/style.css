@@ -1,0 +1,48 @@
+/* Vente */
+body {
+    background-color: #1a1a2e;
+    color: #ffffff;
+}
+
+.sidebar {
+    background-color: #2e2e44;
+    height: 100vh;
+    padding-top: 20px;
+    font-family: "Roboto", sans-serif;
+}
+
+.sidebar .nav-link {
+    color: #ffffff;
+    margin: 10px 0;
+    text-align: center;
+    background-color: azure;
+}
+
+.content {
+    background-color: #16213e;
+    padding: 20px;
+}
+
+.card {
+    background-color: #0f3460;
+    color: #ffffff;
+}
+
+.sales {
+    background-color: #0f3460;
+    padding: 20px;
+}
+
+.table {
+    color: #ffffff;
+}
+
+.actions .btn {
+    margin: 5px;
+}
+
+.total,
+.buttons .btn {
+    margin: 5px 0;
+}
+/* Fin vente */

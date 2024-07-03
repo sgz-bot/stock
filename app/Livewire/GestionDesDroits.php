@@ -104,7 +104,6 @@ class GestionDesDroits extends Component
             ->where('utilisateur_id', $this->admin->id)
             ->where('droit_acces_id', 1)
             ->update(['statut' =>  false]);
-
         }
         else
         {

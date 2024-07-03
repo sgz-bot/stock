@@ -1,14 +1,27 @@
-@extends('base')
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {{-- bootstrap --}}
+    <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
+    {{-- font awesome --}}  
+    <link rel="stylesheet" href="{{ asset('fontawesome/css/all.css') }}">
+    <link rel="stylesheet" href="{{ asset('fontawesome/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('fontawesome/css/fontawesome.css') }}">
+    <link rel="stylesheet" href="{{ asset('style.css') }}">
 
-@section('title', 'Caisse')
-
-@section('content')
+    <title>@yield( 'Caisse' )</title>
+</head>
+<body>
 
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-2 sidebar">
             <h4 style="text-align: center;">Catégorie</h4>
-            <div class="nav flex-column">
+            <div class="nav flex-column"> 
                 <button class="nav-link text-dark active">PC</button>
                 <button class="nav-link text-dark fw-bold">Claviers</button>
                 <button class="nav-link text-dark fw-bold">Memoires</button>
@@ -27,7 +40,7 @@
                 <div class="container">
                     <form class="row g-3">
                         <div class="col-auto">
-                            <input type="password" class="form-control" id="inputSearch" placeholder="Recherche">
+                            <input type="texte" class="form-control" id="inputSearch" placeholder="Recherche">
                         </div>
                         <div class="col-auto">
                             <button type="submit" class="btn btn-primary mb-3"><i
@@ -136,4 +149,10 @@
     </div>
 </div>
     
-@endsection
+
+<script src="{{ asset('bootstrap/js/bootstrap.js') }}" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="{{ asset('bootstrap/js/bootstrap.min.js') }}" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="{{ asset('fontawesome/js/all.js') }}" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
