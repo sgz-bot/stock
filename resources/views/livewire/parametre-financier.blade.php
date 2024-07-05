@@ -1,9 +1,4 @@
-@extends('base')
-
-@section('title', 'Paramètre financier')
-
-@section('content')
-<div class="container-fluid">
+{{-- <div class="container-fluid">
     <div class="row">
         <div class="col-md-3 bg-dark text-white p-3" style="min-height: 100vh">
             <h3 class="text-center">PARAMETRES</h3>
@@ -19,7 +14,7 @@
                 </li>
             </ul>
         </div>
-        
+
         <div class="col-md-9 p-3 bg-light">
             <h3 class="text-center mb-3">Paramètres financier</h3>
             <div class="card bg-light mb-1">
@@ -82,5 +77,34 @@
 
         </div>
     </div>
+</div> --}}
+
+<div>
+    <div class="d-flex justify-content-between text-white py-2 px-2" style="background-color: rgb(33, 33, 236)">
+        <div>Paramètre financier</div>
+        <div>Retour</div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 p-5">
+                <h5 class="mb-4">Taux de TVA</h5>
+
+                <div class="mb-4">
+                    (A)TVA 1 <input wire:model.live="tva1Db" type="text" class="text-center" style="width: 80px" value="{{ $tva1 }}">% &nbsp;&nbsp;&nbsp;&nbsp;
+                    (C)TVA 3 <input wire:model.live="tva3Db" type="text" class="text-center" style="width: 80px" value="{{ $tva3 }}">%
+                    {{-- <div>{{ $test }}</div> --}}
+                </div>
+
+                <div>
+                    (B)TVA 2 <input wire:model.live="tva2Db" wire:model.live="test" type="text" class="text-center" style="width: 80px" value="{{ $tva2 }}">% &nbsp;&nbsp;&nbsp;&nbsp;
+                    (D)TVA 4 <input wire:model.live="tva4Db" type="text" class="text-center" style="width: 80px" value="{{ $tva4 }}">%
+                </div>
+
+                <h5 class="mt-4">Mode de paiement</h5>
+
+                <button wire:>Enregistrer</button>
+            </div>
+        </div>
+    </div>
 </div>
-@endsection
