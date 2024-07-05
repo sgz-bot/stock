@@ -12,12 +12,39 @@
     <link rel="stylesheet" href="{{ asset('fontawesome/css/all.css') }}">
 
     <title>Gestion des catégories</title>
+    <style>
+        /* Réinitialisation des marges et paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Conteneur principal prenant toute la hauteur de la fenêtre */
+        .main-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Exemple de contenu flexible */
+        .content {
+            flex: 1;
+            overflow: hidden; /* Assurer qu'aucun débordement ne provoque de défilement */
+        }
+
+        
+    </style>
 </head>
 
 <body>
 
-    
-    <livewire:categorie />
+    <div class="main-container">
+        <div class="content">
+            <livewire:categorie />
+        </div>
+    </div>
+
 
 
     <script src="{{ asset('bootstrap/js/bootstrap.js') }}"

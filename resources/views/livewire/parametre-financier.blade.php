@@ -88,6 +88,9 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-6 p-5">
+                @if ($message)
+                <div class="alert alert-success">{{ $message }}</div>
+                @endif
                 <h5 class="mb-4">Taux de TVA</h5>
 
                 <div class="mb-4">
@@ -103,7 +106,7 @@
 
                 <h5 class="mt-4">Mode de paiement</h5>
 
-                <button wire:>Enregistrer</button>
+                <button wire:click="enregistrer">Enregistrer</button>
             </div>
         </div>
     </div>
