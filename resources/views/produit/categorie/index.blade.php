@@ -33,7 +33,7 @@
             overflow: hidden; /* Assurer qu'aucun débordement ne provoque de défilement */
         }
 
-        
+
     </style>
 </head>
 
@@ -41,7 +41,7 @@
 
     <div class="main-container">
         <div class="content">
-            <livewire:categorie />
+            <livewire:gestion-des-categories />
         </div>
     </div>
 

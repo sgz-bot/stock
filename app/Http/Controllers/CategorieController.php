@@ -8,6 +8,6 @@ class CategorieController extends Controller
 {
     public function index()
     {
-        return view("categorie.index");
+        return view("produit.categorie.index");
     }
 }

@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Utilisateur;
+use App\Models\Pharmacie;
 use App\Models\DroitAcces;
 use App\Models\UtilisateurDroitAcces;
 use Illuminate\Database\Seeder;
@@ -28,13 +29,15 @@ class DatabaseSeeder extends Seeder
             UtilisateurSeeder::class,
         ]);
 
+        // Création de l'admin et attribution de tous les droits
         $droitsAcces = DroitAcces::all();
         $utilisateur = Utilisateur::factory()->create([
             'nom' => 'Admin',
             'motDePasse' => '1234'
         ]);
-
         $utilisateur->droitsAcces()->attach($droitsAcces);
+
+        Pharmacie::factory()->create();
 
     }
 }

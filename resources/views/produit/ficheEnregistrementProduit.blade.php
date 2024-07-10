@@ -1,4 +1,4 @@
-@extends('base')
+{{-- @extends('base')
 
 @section('title', 'Fiche d\'enrégistremet d\'un produit')
 
@@ -6,7 +6,6 @@
 
 <div class="container">
     <h1 class="mb-4">Nouvelle fiche</h1>
-    <!-- Formulaire d'enregistrement -->
     <form>
       <div class="row">
         <div class="col-md-3">
@@ -190,5 +189,127 @@
       <button type="submit" class="btn btn-primary">Sauver</button>
     </form>
   </div>
-    
-@endsection
+
+@endsection --}}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {{-- bootstrap --}}
+    <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
+    {{-- font awesome --}}
+    <link rel="stylesheet" href="{{ asset('fontawesome/css/all.css') }}">
+
+    <title>Fiche enregistrement</title>
+    <style>
+        /* Réinitialisation des marges et paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Conteneur principal prenant toute la hauteur de la fenêtre */
+        .main-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Exemple de contenu flexible */
+        .content {
+            flex: 1;
+            overflow: hidden; /* Assurer qu'aucun débordement ne provoque de défilement */
+        }
+
+
+        .toggle-container {
+            /* display: flex; */
+            align-items: center;
+            font-size: 0.8em;
+        }
+        
+        .toggle-label {
+            margin-right: 10px;
+        }
+
+        .toggle-switch {
+            position: relative;
+            display: block;
+            width: 60px;
+            height: 34px;
+            
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        /* Style pour le slider */
+       
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="main-container">
+        <div class="content">
+            <livewire:fiche-enregistrement-produit />
+        </div>
+    </div>
+
+
+
+    <script src="{{ asset('bootstrap/js/bootstrap.js') }}"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+    <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+    <script src="{{ asset('fontawesome/js/all.js') }}"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>
