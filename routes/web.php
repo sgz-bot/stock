@@ -6,7 +6,7 @@ use App\Http\Controllers\ProduitController;
 use App\Http\Controllers\CategorieController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 
