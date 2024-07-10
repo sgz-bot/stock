@@ -26,6 +26,8 @@ return new class extends Migration
             $table->decimal("pv1")->nullable();
             $table->decimal("pv2")->nullable();
             $table->decimal("pv3")->nullable();
+            $table->integer("qteStock")->nullable();
+            $table->string("codeTva")->nullable();
             $table->foreignIdFor(SousCategorie::class)->constrained()->cascadeOnDelete();
             $table->timestamps();
         });

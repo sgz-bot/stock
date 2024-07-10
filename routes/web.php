@@ -18,3 +18,5 @@ Route::get('/parametre/gestion-droits', [ParametreController::class, 'gestionDro
 
 
 Route::get('/gestion-categorie', [CategorieController::class, 'index'])->name('gestionCategorie');
+
+Route::get('/fiche-enregistrement', [ProduitController::class, 'ficheEnregistrement'])->name('ficheEnregistrement');

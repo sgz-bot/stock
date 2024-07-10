@@ -8,7 +8,7 @@ class ProduitController extends Controller
 {
     public function ficheEnregistrement()
     {
-        return view("produit.ficheEnregistrement");
+        return view("produit.ficheEnregistrementProduit");
     }
 
     public function vente()
